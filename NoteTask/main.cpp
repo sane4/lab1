@@ -1,21 +1,21 @@
 #include "Note.h"
 
 int main(){
-	const int size = 8;//размер
+	const int size = 8;//СЂР°Р·РјРµСЂ
 	setlocale(LC_ALL, "");
-	Note notes[size];//массив знаков
+	Note notes[size];//РњР°СЃСЃРёРІ Р·РЅР°РєРѕРІ
 	int choice;
 	while(true){
-		 cout << "\n1. Считать\n2. Поиск\n3. Изменить\n4. Выход\n-> ";
+		 cout << "\n1. РЎС‡РёС‚Р°С‚СЊ\n2. РџРѕРёСЃРє\n3. РР·РјРµРЅРёС‚СЊ\n4. Р’С‹С…РѕРґ\n-> ";
 		 cin >> choice;
 		 if(choice == 1){
-			 cout << "Имя Фамилия Телефон DD MM YY\n";
+			 cout << "РРјСЏ Р¤Р°РјРёР»РёСЏ РўРµР»РµС„РѕРЅ DD MM YY\n";
 			 try{
-				 //считываем данные
+				 //СЃС‡РёС‚С‹РІР°РµРј РґР°РЅРЅС‹Рµ
 				for(int i = 0; i < size; ++i){
 				   cin >> notes[i];
 				}
-				/*Сортируем*/
+				/*РЎРѕСЂС‚РёСЂСѓРµРј*/
 				int j, n = size;
 				do {
 					int nn = 0;
@@ -36,7 +36,7 @@ int main(){
 			 }
 		 }
 		 else if(choice == 2){
-			 cout << "Введите номер телефона: ";
+			 cout << "Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ С‚РµР»РµС„РѕРЅР°: ";
 			 string phone;
 			 cin >> phone;
 			 int i;
@@ -52,10 +52,10 @@ int main(){
 		 else if(choice == 3){
 			 int index;
 			 do{
-				cout << "Введите индекс: ";
+				cout << "Р’РІРµРґРёС‚Рµ РёРЅРґРµРєСЃ: ";
 				cin >> index;
-			 } while(index < 0 || index >= 8);//защита от некорректного ввода
-			 cout << "Имя Фамилия Телефон DD MM YY\n";
+			 } while(index < 0 || index >= 8);//Р·Р°С‰РёС‚Р° РѕС‚ РЅРµРєРѕСЂСЂРµРєС‚РЅРѕРіРѕ РІРІРѕРґР°
+			 cout << "РРјСЏ Р¤Р°РјРёР»РёСЏ РўРµР»РµС„РѕРЅ DD MM YY\n";
 			 cin >> notes[index];
 		 }
 		 else if(choice == 4){
