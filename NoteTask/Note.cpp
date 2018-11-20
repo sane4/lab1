@@ -21,7 +21,7 @@ Note::Note(const Note& note){
 Note::~Note(){
 	cout << "~Note()";
 }
-//геттеры и сеттеры
+//РіРµС‚С‚РµСЂС‹ Рё СЃРµС‚С‚РµСЂС‹
 string& Note::Name(){
 	return name;
 }
@@ -40,7 +40,7 @@ int& Note::Day(){
 int& Note::Year(){
 	return date[2];
 }
-//операторы
+//РѕРїРµСЂР°С‚РѕСЂС‹
 ostream& operator<<(ostream& out, const Note& note){
 	out << note.name << '\n' << note.surname << '\n' << note.phone << '\n' <<
 		note.date[0] << '/' << note.date[1] << '/' << note.date[2];
@@ -48,7 +48,7 @@ ostream& operator<<(ostream& out, const Note& note){
 }
 istream& operator>>(istream& in, Note& note){
 	if(!(in >> note.name >> note.surname >> note.phone >> note.date[0] >> note.date[1] >> note.date[2])){
-		throw Exception("Ошибка ввода");
+		throw Exception("ГЋГёГЁГЎГЄГ  ГўГўГ®Г¤Г ");
 	}
 	return in;
 }
